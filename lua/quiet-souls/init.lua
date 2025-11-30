@@ -7,7 +7,9 @@ end
 vim.g["colors_name"] = "quiet_souls"
 vim.o["termguicolors"] = true
 -- keywords: #f5f5f5, #dcdcdc, #757575, #d4ccd1, #856e7b, #e6e4ba, #f5f3d7, #f5f3dd, #f5f5f5, #212121(inversion)
-local quiet_souls = (((vim.o.background == "dark") and {bg00 = "#110e10", fg00 = "#FFFFFF", shade00 = "#FFFFFF", shade01 = "#ededed", shade02 = "#a9a6a6", shade03 = "#313131", soul00 = "#006600", soul01 = "#8dfc79", soul02 = "#98EA38", soul03 = "#d3c520", soul04 = "#e40509", soul05 = "#d38b20", soul06 = "#f8e7b6", soul07 = "#f4ffcc", soul08 = "#947a89", soul09 = "#c9f7c1", soul10 = "#212121", none = "NONE"}) or {bg00 = "#110e10", fg00 = "#212121", shade00 = "#363636", shade01 = "#0a0a0a", shade02 = "#636363", shade03 = "#313131", soul00 = "#006600", soul01 = "#8dfc79", soul02 = "#98EA38", soul03 = "#d3c520", soul04 = "#e40509", soul05 = "#d38b20", soul06 = "#f8e7b6", soul07 = "#f4ffcc", soul08 = "#947a89", soul09 = "#c9f7c1", soul10 = "#f5f5f5", none = "NONE"})
+-- @keyword (soul08): prev: #947a89 , #638c74, #84ba9a, #a8edc4, #c9efda,  #efdcc9, #a8edc4, #78dba1
+-- comment (soul12): #9e8f7a
+local quiet_souls = (((vim.o.background == "dark") and {bg00 = "#110e10", fg00 = "#FFFFFF", shade00 = "#FFFFFF", shade01 = "#363636", shade02 = "#a9a6a6", shade03 = "#1a1a1a", soul00 = "#006600", soul01 = "#8dfc79", soul02 = "#98EA38", soul03 = "#d3c520", soul04 = "#e40509", soul05 = "#d38b20", soul06 = "#f8e7b6", soul07 = "#f4ffcc", soul08 = "#78dba1", soul09 = "#c9f7c1", soul10 = "#212121", soul11 = "#d9ffe2", soul12 = "#a9a6a6", soul13 = "#25fdbb", none = "NONE"}) or {bg00 = "#110e10", fg00 = "#212121", shade00 = "#363636", shade01 = "#0a0a0a", shade02 = "#636363", shade03 = "#1a1a1a", soul00 = "#006600", soul01 = "#8dfc79", soul02 = "#98EA38", soul03 = "#d3c520", soul04 = "#e40509", soul05 = "#d38b20", soul06 = "#f8e7b6", soul07 = "#f4ffcc", soul08 = "#947a89", soul09 = "#c9f7c1", soul10 = "#f5f5f5", soul12 = "#a9a6a6", soul13 = "#25fdbb", none = "NONE"})
 
 vim.g["terminal_color_0"] = quiet_souls.bg00
 vim.g["terminal_color_1"] = quiet_souls.soul00
@@ -62,7 +64,7 @@ vim.api.nvim_set_hl(0, "HealthError", {fg = quiet_souls.soul04, bg = quiet_souls
 vim.api.nvim_set_hl(0, "HealthWarning", {fg = quiet_souls.soul05, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "HealthSuccess", {fg = quiet_souls.soul01, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "@comment", {link = "Comment"})
-vim.api.nvim_set_hl(0, "@comment.go", {fg = quiet_souls.shade02, bg = quiet_souls.none, italic = true})
+vim.api.nvim_set_hl(0, "@comment.go", {fg = quiet_souls.soul12, bg = quiet_souls.none, italic = true})
 vim.api.nvim_set_hl(0, "@text.literal.commodity", {fg = quiet_souls.shade00, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "@number", {fg = quiet_souls.soul03, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "@number.date", {fg = quiet_souls.fg00, bg = quiet_souls.none})
@@ -159,7 +161,7 @@ vim.api.nvim_set_hl(0, "VertSplit", {fg = quiet_souls.fg00, bg = quiet_souls.non
 vim.api.nvim_set_hl(0, "WinSeparator", {fg = quiet_souls.fg00, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "Boolean", {fg = quiet_souls.soul01, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "Character", {fg = quiet_souls.soul00, bg = quiet_souls.none})
-vim.api.nvim_set_hl(0, "Comment", {fg = quiet_souls.shade02, bg = quiet_souls.none, italic = true})
+vim.api.nvim_set_hl(0, "Comment", {fg = quiet_souls.soul12, bg = quiet_souls.none, italic = true})
 vim.api.nvim_set_hl(0, "Conceal", {fg = quiet_souls.none, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "Conditional", {fg = quiet_souls.fg00, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "Constant", {fg = quiet_souls.fg00, bg = quiet_souls.none})
@@ -182,7 +184,7 @@ vim.api.nvim_set_hl(0, "SpecialChar", {fg = quiet_souls.fg00, bg = quiet_souls.n
 vim.api.nvim_set_hl(0, "SpecialComment", {fg = quiet_souls.fg00, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "Statement", {fg = quiet_souls.fg00, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "StorageClass", {fg = quiet_souls.fg00, bg = quiet_souls.none})
-vim.api.nvim_set_hl(0, "String", {fg = quiet_souls.fg00, bg = quiet_souls.none, underline = true})
+vim.api.nvim_set_hl(0, "String", {fg = quiet_souls.fg00, bg = quiet_souls.none, underdotted = true})
 vim.api.nvim_set_hl(0, "Structure", {fg = quiet_souls.fg00, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "Tag", {fg = quiet_souls.fg00, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "Todo", {fg = quiet_souls.soul06, bg = quiet_souls.none})
@@ -225,7 +227,7 @@ vim.api.nvim_set_hl(0, "@punctuation.special", {fg = quiet_souls.fg00, bg = quie
 vim.api.nvim_set_hl(0, "@string", {link = "String"})
 vim.api.nvim_set_hl(0, "@string.go", {link = "String"})
 vim.api.nvim_set_hl(0, "@string.regex", {fg = quiet_souls.fg00, bg = quiet_souls.none})
-vim.api.nvim_set_hl(0, "@string.escape", {fg = quiet_souls.soul03, bg = quiet_souls.none})
+vim.api.nvim_set_hl(0, "@string.escape", {fg = quiet_souls.soul11, bg = quiet_souls.none})
 vim.api.nvim_set_hl(0, "@character", {link = "Character"})
 vim.api.nvim_set_hl(0, "@boolean", {link = "Boolean"})
 vim.api.nvim_set_hl(0, "@number", {link = "Number"})
