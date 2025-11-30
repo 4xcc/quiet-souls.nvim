@@ -11,7 +11,7 @@ NOTE: This theme is a work in progress, expect small changes from time to time.
 Lazy:
 ```lua
 {
-    "vsaya/quiet-souls.nvim"
+    "4xcc/quiet-souls.nvim"
 }
 ```
 
